@@ -1,0 +1,6 @@
+
+ - Listar livros cadastrados.
+ - ver detalhes sobre livro.
+ - barra de busca p/ pesquisar livros/autores.
+ - Atualizar info. de livro.
+ - Deletar livro.
