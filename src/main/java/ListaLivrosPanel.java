@@ -81,4 +81,21 @@ public class ListaLivrosPanel extends JPanel {
             listaLivrosModel.addElement(livro.getNome());
         }
     }
+
+    public void atualizaListaConformePesquisa(String pesquisaDigitada){
+
+        List<Livro> livrosFiltrados = new ArrayList<>();
+
+        for (Livro livro : titulosLivros) {
+            if (livro.getNome().toLowerCase().contains(pesquisaDigitada.toLowerCase())) {
+                livrosFiltrados.add(livro); // Adicione o livro à lista de livros filtrados se o nome contiver a pesquisa
+            }
+        }
+
+        // Atualize o modelo da lista para refletir os livros filtrados
+        listaLivrosModel.clear();
+        for (Livro livro : livrosFiltrados) {
+            listaLivrosModel.addElement(livro.getNome());
+        }
+    }
 }

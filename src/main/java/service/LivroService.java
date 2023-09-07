@@ -38,7 +38,6 @@ public class LivroService {
             }
             e.printStackTrace();
         } finally {
-            entityManager.close();
         }
     }
 
@@ -69,7 +68,6 @@ public class LivroService {
             e.printStackTrace();
             return deletouComSucesso;
         } finally {
-            entityManager.close();
             return deletouComSucesso;
         }
     }

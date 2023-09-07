@@ -36,8 +36,8 @@ public class Janela extends JFrame {
         cardPanel = new JPanel(cardLayout);
         JPanel mainPanel = new JPanel(new BorderLayout());
         LivroDetailsPanel livroDetailsPanel = new LivroDetailsPanel(livroService, this);
-        JPanel searchPanel = new SearchBarPanel();
         listaLivrosPanel = new ListaLivrosPanel(livroDetailsPanel, livroService);
+        SearchBarPanel searchPanel = new SearchBarPanel(listaLivrosPanel);
         livroDetailsPanel.injetarListaLivrosPanel(listaLivrosPanel);
         JPanel bottomConfigPanel = new JPanel();
         ConfigPanel configPanel = new ConfigPanel(listaLivrosPanel, livroService);
